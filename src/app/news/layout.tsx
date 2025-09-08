@@ -13,5 +13,9 @@ export default function NewsLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  return <main>{children}</main>;
+  return (
+    <main className="flex flex-col justify-center items-center gap-4 p-8">
+      {children}
+    </main>
+  );
 }
