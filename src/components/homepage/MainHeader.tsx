@@ -18,9 +18,17 @@ export default function MainHeader() {
             />
           </Link>
         </div>
-        <ul className="flex flex-row gap-4 justify-center items-center text-md font-medium">
+        <ul className="flex flex-row gap-8 justify-center items-center text-md font-medium">
           <li>
             <NavLink href={"/news"}>News</NavLink>
+          </li>
+          <li>
+            <Link
+              href={"/contacts"}
+              className="flex flex-row gap-2 px-8 py-2 bg-primary rounded-full hover:opacity-90 transition"
+            >
+              Contact
+            </Link>
           </li>
         </ul>
       </nav>
