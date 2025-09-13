@@ -9,7 +9,7 @@ export default function NavLink({ href, children }: LinkType) {
     <Link
       href={href}
       className={` hover:text-gray-300 ${
-        pathname.startsWith(href) ? "text-pink-500" : ""
+        pathname.startsWith(href) ? "text-primary" : ""
       }`}
     >
       {children}

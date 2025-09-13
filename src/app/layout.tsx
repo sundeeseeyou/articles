@@ -27,7 +27,9 @@ export default function RootLayout({
     <html lang="en">
       <body className={`${manrope.variable} ${geistMono.variable} antialiased`}>
         <MainHeader />
-        {children}
+        <main className="max-w-[1180px] flex flex-col justify-center items-center gap-4 p-4 border mx-auto">
+          {children}
+        </main>
       </body>
     </html>
   );
