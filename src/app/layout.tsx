@@ -1,10 +1,5 @@
 import type { Metadata } from "next";
-<<<<<<< HEAD
-import { Geist, Geist_Mono } from "next/font/google";
-import MainHeader from "@/components/homepage/MainHeader";
-=======
 import { Manrope, Geist_Mono } from "next/font/google";
->>>>>>> d0f566aefe181d5baa34fd56040b9bdde2d78a6d
 import "./globals.css";
 
 const manrope = Manrope({
@@ -29,14 +24,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-<<<<<<< HEAD
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
-        <MainHeader />
-=======
       <body className={`${manrope.variable} ${geistMono.variable} antialiased`}>
->>>>>>> d0f566aefe181d5baa34fd56040b9bdde2d78a6d
         {children}
       </body>
     </html>
