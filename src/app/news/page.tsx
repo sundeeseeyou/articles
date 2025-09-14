@@ -21,6 +21,14 @@ export default function News() {
             Indonesia is Wrong
           </Link>
         </li>
+        <li>
+          <Link
+            href="/news/indonesia-is-wrong"
+            className="text-white hover:underline"
+          >
+            Indonesia is not really wrong
+          </Link>
+        </li>
       </ul>
     </>
   );
