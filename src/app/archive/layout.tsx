@@ -1,4 +1,4 @@
-import { ArchiveLayoutProps } from "@/components/types";
+import { ArchiveLayoutProps } from "@/lib/types";
 
 export default function ArchiveLayout({ archive, latest }: ArchiveLayoutProps) {
   return (

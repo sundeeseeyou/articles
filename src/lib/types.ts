@@ -9,3 +9,12 @@ export type ArchiveLayoutProps = {
   archive: ReactNode;
   latest: ReactNode;
 };
+
+export type NewsType = {
+  id: string;
+  slug: string;
+  title: string;
+  image: string;
+  date: number;
+  content: string;
+};

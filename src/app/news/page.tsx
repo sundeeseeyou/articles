@@ -1,35 +1,12 @@
-import Link from "next/link";
+import NewsCard from "@/components/news/NewsCard";
 
 export default function News() {
   return (
     <>
       <h1 className="text-4xl ">News List</h1>
-      <ul>
-        <li>
-          <Link
-            href="/news/indonesia-is-great"
-            className="text-white hover:underline"
-          >
-            Indonesia is Great
-          </Link>
-        </li>
-        <li>
-          <Link
-            href="/news/indonesia-is-wrong"
-            className="text-white hover:underline"
-          >
-            Indonesia is Wrong
-          </Link>
-        </li>
-        <li>
-          <Link
-            href="/news/indonesia-is-wrong"
-            className="text-white hover:underline"
-          >
-            Indonesia is not really wrong
-          </Link>
-        </li>
-      </ul>
+      <div className="flex flex-lg-row flex-col gap-4 mt-8">
+        <NewsCard />
+      </div>
     </>
   );
 }
