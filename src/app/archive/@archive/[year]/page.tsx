@@ -1,3 +1,10 @@
+import NewsCard from "@/components/news/NewsCard";
+
 export default function filteredNews() {
-  return <h1>Filtered News by Year</h1>;
+  return (
+    <div>
+      <h1>Filtered News </h1>
+      <NewsCard />
+    </div>
+  );
 }

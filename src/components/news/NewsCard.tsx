@@ -2,7 +2,7 @@ import { DUMMY_NEWS } from "../../../dummy-news";
 import Link from "next/link";
 import Image from "next/image";
 
-export default function NewsCard() {
+export default function NewsCard({ news }: { news?: typeof DUMMY_NEWS }) {
   return (
     <div className="grid lg:grid-cols-4 grid-cols-1 gap-x-8 gap-y-12 justify-center h-full">
       {DUMMY_NEWS.map((singleNews) => (
