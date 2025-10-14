@@ -1,10 +1,10 @@
 import { notFound } from "next/navigation";
 import { DUMMY_NEWS } from "../../../../dummy-news";
 
-type PageProps = { params: { slug: string } };
+type PageProps = Promise<{ slug: string }>;
 
-export default function SingleNews({ params }: PageProps) {
-  const { slug } = params;
+export default async function SingleNews({ params }: { params: PageProps }) {
+  const { slug } = await params;
   const news = DUMMY_NEWS.find((n) => n.slug === slug);
 
   if (!news) notFound();

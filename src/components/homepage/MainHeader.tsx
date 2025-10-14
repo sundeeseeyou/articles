@@ -4,8 +4,8 @@ import NavLink from "@/components/homepage/NavLink";
 
 export default function MainHeader() {
   return (
-    <header className="min-w-screen px-2 py-4 border-b border-white/10 mb-8">
-      <nav className="mx-auto flex flex-row max-w-[1440px] justify-between items-center">
+    <header className="min-w-[1440px] px-2 py-4 border-b border-white/10 mb-8">
+      <nav className="flex flex-row px-8 justify-between items-center mx-auto ">
         <div>
           <Link href={"/"}>
             <Image
@@ -22,6 +22,10 @@ export default function MainHeader() {
           <li>
             <NavLink href={"/news"}>News</NavLink>
           </li>
+          <li>
+            <NavLink href={"/archive"}>Archive</NavLink>
+          </li>
+
           <li>
             <Link
               href={"/contacts"}
