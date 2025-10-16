@@ -4,8 +4,15 @@ export function getAllNews() {
   return DUMMY_NEWS;
 }
 
+// export function getLatestNews() {
+//   return DUMMY_NEWS.slice(0, 3);
+// }
+
 export function getLatestNews() {
-  return DUMMY_NEWS.slice(0, 3);
+  return DUMMY_NEWS.sort(
+    (a, b) => new Date(b.date).getTime() - new Date(a.date).getTime()
+  ) // newest first
+    .slice(0, 3); // take only 3
 }
 
 export function getAvailableNewsYears() {

@@ -11,7 +11,7 @@ export default function ArchivePage() {
             <Link href={`/archive/${year}`}>{year}</Link>
           </li>
         ))}
-      </ul>{" "}
+      </ul>
     </article>
   );
 }

@@ -15,6 +15,6 @@ export type NewsType = {
   slug: string;
   title: string;
   image: string;
-  date: number;
+  date: string;
   content: string;
 };

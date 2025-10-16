@@ -1,11 +1,15 @@
-import { DUMMY_NEWS } from "../../../dummy-news";
 import Link from "next/link";
 import Image from "next/image";
+import { NewsType } from "@/lib/types";
 
-export default function NewsCard() {
+interface newsCardProps {
+  news: NewsType[];
+}
+
+export default function NewsCard({ news }: newsCardProps) {
   return (
     <div className="grid lg:grid-cols-4 grid-cols-1 gap-x-8 gap-y-8 justify-center h-full">
-      {DUMMY_NEWS.map((singleNews) => (
+      {news.map((singleNews) => (
         <div key={singleNews.id}>
           <Link
             href={`/news/${singleNews.slug}`}
@@ -19,7 +23,7 @@ export default function NewsCard() {
             />
             <h3>{singleNews.title}</h3>
             <p className="text-xs text-gray-500">
-              Published: {new Date(singleNews.date).getFullYear()}
+              Published: {singleNews.date}
             </p>
           </Link>
         </div>

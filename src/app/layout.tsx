@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Manrope, Geist_Mono } from "next/font/google";
 import MainHeader from "@/components/homepage/MainHeader";
-import "@/app/globals.css";
+import "./globals.css";
 
 const manrope = Manrope({
   variable: "--font-geist-sans",

@@ -11,6 +11,7 @@ export default async function SingleNews({ params }: { params: PageProps }) {
 
   return (
     <div className="max-w-[50rem] flex flex-col justify-center items-start gap-4">
+      <h1 className="text-4xl mb-2 mt-2">{news.title}</h1>
       <div className="flex flex-col aspect-video justify-start w-full overflow-hidden rounded-xl">
         <img
           src={`/images/news/${news.image}`}
@@ -18,7 +19,7 @@ export default async function SingleNews({ params }: { params: PageProps }) {
           className="w-auto h-auto object-cover object-center mb-8 rounded-xl"
         />
       </div>
-      <h1 className="text-4xl mb-2 mt-2">{news.title}</h1>
+
       <p className="opacity-80">{news.content}</p>
     </div>
   );
