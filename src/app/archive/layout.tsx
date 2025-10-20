@@ -2,7 +2,7 @@ import { ArchiveLayoutProps } from "@/lib/types";
 
 export default function ArchiveLayout({ archive, latest }: ArchiveLayoutProps) {
   return (
-    <main className="flex flex-col justify-center items-center gap-4 w-full">
+    <main className="flex flex-col justify-center items-center gap-4 min-w-screen">
       <h1 className="text-4xl font-bold">Archive Layout</h1>
       <section
         id="archive-filter"

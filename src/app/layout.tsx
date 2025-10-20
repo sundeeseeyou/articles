@@ -1,7 +1,8 @@
 import type { Metadata } from "next";
 import { Manrope, Geist_Mono } from "next/font/google";
 import MainHeader from "@/components/homepage/MainHeader";
-import "./globals.css";
+import "@/app/global.css";
+import Footer from "@/components/homepage/Footer";
 
 const manrope = Manrope({
   variable: "--font-geist-sans",
@@ -25,11 +26,14 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${manrope.variable} ${geistMono.variable} antialiased`}>
+      <body
+        className={`flex flex-col min-h-screen w-full max-w-screen mx-auto overflow-x-hidden ${manrope.variable} ${geistMono.variable} antialiased `}
+      >
         <MainHeader />
-        <main className="flex flex-col justify-center items-center gap-4 p-4 mx-auto min-w-[1440px] max-w-full">
+        <main className="flex flex-col justify-start items-center flex-grow max-w-screen mx-auto">
           {children}
         </main>
+        <Footer />
       </body>
     </html>
   );
