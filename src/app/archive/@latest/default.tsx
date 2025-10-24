@@ -8,7 +8,7 @@ export default function LatestNewsPage() {
   const upToDate = getLatestNews();
   return (
     <article className="flex flex-col justify-start items-start">
-      <h2 className="text-xl lg:mb-8 ">Latest New Page</h2>
+      <h2 className="text-2xl font-bold lg:mb-8 ">Latest New Page</h2>
       <NewsCard news={upToDate} />
     </article>
   );
