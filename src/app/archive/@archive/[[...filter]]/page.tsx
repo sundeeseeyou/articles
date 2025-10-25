@@ -9,13 +9,22 @@ export default async function FilteredNews({ params }: { params: PageProps }) {
   const filteredNews = getNewsForYear(filter);
   const links = getAvailableNewsYears();
 
+  const hasFilter = !!(filter && filter.length > 0);
+  const emptyNews = filteredNews.length === 0;
+
+  let message = "";
+
+  if (emptyNews) {
+    message = hasFilter
+      ? "No news found in that year!"
+      : "Select a year to filter.";
+  }
+
   return (
     <div className="flex flex-col justify-center items-start">
       <h2 className="text-2xl font-bold mb-4">Filtered for: {filter}</h2>
       <NavYear links={links} />
-      <p className="text-sm text-gray-400">
-        {filteredNews.length === 0 ? "Pilih Tahun yang tersedia!" : null}
-      </p>
+      {message && <p className="text-gray-600 italic mb-4">{message}</p>}
       <NewsCard news={filteredNews} />
     </div>
   );
