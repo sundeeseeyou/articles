@@ -21,7 +21,7 @@ export default async function FilteredNews({ params }: { params: PageProps }) {
   }
 
   return (
-    <div className="flex flex-col justify-center items-start">
+    <div className="flex flex-col justify-center items-start border-b-1 border-b-gray-800 pb-8">
       <h2 className="text-2xl font-bold mb-4">Filtered for: {filter}</h2>
       <NavYear links={links} />
       {message && <p className="text-gray-600 italic mb-4">{message}</p>}

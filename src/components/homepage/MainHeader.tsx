@@ -5,7 +5,7 @@ import NavLink from "@/components/homepage/NavLink";
 export default function MainHeader() {
   return (
     <header className="min-w-[1440px] px-2 py-4 border-b border-white/10 mb-8">
-      <nav className="flex flex-row px-8 justify-between items-center mx-auto ">
+      <nav className="flex flex-row px-4 lg:px-8 justify-between items-center mx-auto ">
         <div>
           <Link href={"/"}>
             <Image
