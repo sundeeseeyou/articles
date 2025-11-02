@@ -18,3 +18,8 @@ export type NewsType = {
   date: string;
   content: string;
 };
+
+export type LayoutProps = {
+  children: ReactNode;
+  modal: ReactNode;
+};
