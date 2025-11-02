@@ -15,13 +15,14 @@ export default async function interceptedImage({
 
   return (
     <>
-      <h2>INTERCEPTED</h2>
       <div className="max-w-[50rem] flex flex-col justify-center items-start gap-4">
-        <img
-          src={`/images/news/${newsItem.image}`}
-          alt={newsItem.title ?? "News Image"}
-          className="w-auto h-auto object-cover object-center mb-8 rounded-xl"
-        />
+        <dialog open>
+          <img
+            src={`/images/news/${newsItem.image}`}
+            alt={newsItem.title ?? "News Image"}
+            className="w-auto h-auto object-cover object-center mb-8 rounded-xl"
+          />
+        </dialog>
       </div>
     </>
   );
