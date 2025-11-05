@@ -1,5 +1,7 @@
 import { DUMMY_NEWS } from "../../../../../../dummy-news";
 import { notFound } from "next/navigation";
+import OverlayDiv from "./OverlayDiv";
+
 type PageProps = Promise<{ slug: string }>;
 
 export default async function InterceptedImage({
@@ -13,20 +15,9 @@ export default async function InterceptedImage({
   if (!newsItem) notFound();
 
   return (
-    <div className="fixed inset-0 flex items-center justify-center bg-black/50 backdrop-blur-sm z-50">
-      {/* Force dialog to fill screen and center content */}
-      <dialog
-        open
-        className="m-0 p-0 w-full h-full bg-transparent flex items-center justify-center border-none"
-      >
-        <div className="relative">
-          <img
-            src={`/images/news/${newsItem.image}`}
-            alt={newsItem.title ?? "News Image"}
-            className="max-w-[90vw] max-h-[80vh] object-cover rounded-xl shadow-xl"
-          />
-        </div>
-      </dialog>
-    </div>
+    <OverlayDiv
+      image={`/images/news/${newsItem.image}`}
+      title={newsItem.title ?? "News Image"}
+    />
   );
 }
