@@ -14,7 +14,7 @@ export default async function imageFullScreen({
   if (!newsItem) notFound();
 
   return (
-    <div className="max-w-[50rem] flex flex-col justify-center items-start gap-4">
+    <div className="flex flex-col aspect-video justify-start w-full overflow-hidden rounded-xl">
       <img
         src={`/images/news/${newsItem.image}`}
         alt={newsItem.title ?? "News Image"}

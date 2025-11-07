@@ -4,7 +4,7 @@ import NavLink from "@/components/homepage/NavLink";
 
 export default function MainHeader() {
   return (
-    <header className="min-w-[1440px] px-2 py-4 border-b border-white/10 mb-8">
+    <header className="w-full px-2 py-2 border-b border-white/10 mb-8">
       <nav className="flex flex-row px-4 lg:px-8 justify-between items-center mx-auto ">
         <div>
           <Link href={"/"}>
@@ -12,7 +12,7 @@ export default function MainHeader() {
               className="dark:invert"
               src="/nyus-logo.svg"
               alt="Nyus News Logo"
-              width={120}
+              width={80}
               height={38}
               priority
             />

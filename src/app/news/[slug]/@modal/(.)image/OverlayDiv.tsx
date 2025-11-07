@@ -2,6 +2,7 @@
 
 import { useRouter } from "next/navigation";
 import { MdOutlineClose } from "react-icons/md";
+import { useState, useEffect } from "react";
 
 export default function OverlayDiv({
   image,
@@ -11,6 +12,12 @@ export default function OverlayDiv({
   title: string;
 }) {
   const router = useRouter();
+  const [show, setShow] = useState(false);
+
+  useEffect(() => {
+    // Trigger animation after mount
+    setTimeout(() => setShow(true), 10);
+  }, []);
 
   const handleOverlayClick = () => {
     try {
@@ -27,7 +34,9 @@ export default function OverlayDiv({
     >
       {/* Bagian konten modal */}
       <div
-        className="relative cursor-default"
+        className={`relative cursor-default transform transition-all duration-500 ease-out ${
+          show ? "scale-100" : "scale-75"
+        }`}
         onClick={(e) => e.stopPropagation()} // ini mencegah klik pada gambar ikut nutup
       >
         <img
