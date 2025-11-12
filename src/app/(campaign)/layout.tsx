@@ -18,14 +18,21 @@ export const metadata: Metadata = {
   description: "Adem Banget Beritanya Mas...",
 };
 
-export default function RootLayout({
+export default function campaignLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body
+        className={`flex flex-col min-h-screen w-full max-w-[1920px] mx-auto overflow-x-hidden ${manrope.variable} ${geistMono.variable} antialiased `}
+      >
+        <main className="flex flex-col justify-start items-center flex-grow min-w-[1280px] mx-auto gap-4 lg:px-6 lg:py-16 px-5">
+          {children}
+        </main>
+        <Footer />
+      </body>
     </html>
   );
 }
