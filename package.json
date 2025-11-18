@@ -9,6 +9,8 @@
     "lint": "eslint"
   },
   "dependencies": {
+    "better-sqlite3": "^12.4.1",
+    "cors": "^2.8.5",
     "dotenv": "^17.2.2",
     "next": "15.5.0",
     "react": "19.1.0",
