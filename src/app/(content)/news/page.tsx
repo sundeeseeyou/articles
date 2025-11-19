@@ -1,35 +1,16 @@
 import NewsCard from "@/components/news/NewsCard";
 // import { getAllNews } from "@/lib/news";
-import { useState, useEffect } from "react";
 
-export default function News() {
+export default async function News() {
   // const all = getAllNews();
-  const [isLoading, setIsLoading] = useState(false);
-  const [error, setError] = useState();
-  const [newsData, setNewsData] = useState();
+  const response = await fetch("http://localhost:8080/news");
 
-  useEffect(() => {
-    async function fetchNews() {
-      const response = await fetch("https://localhost:9090");
+  if (!response.ok) {
+    throw new Error("Failed to fetch news data");
+  }
 
-      if (!response.ok) {
-        setError("Failed to fetch news");
-        setIsLoading(false);
-      }
+  const all = await response.json();
 
-      const news = await response.json();
-      setIsLoading(false);
-      setNewsData(news);
-    }
-    fetchNews();
-  }, []);
-
-  if (isLoading) return <p>Loading...</p>;
-  if (error) return <p>{error}</p>;
-
-  let newsContent;
-
-  if (newsData) return (newsContent = <NewsCard news={newsData} />);
   return (
     <>
       <h1 className="text-4xl font-bold">Hottest News!</h1>
