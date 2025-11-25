@@ -30,7 +30,7 @@ export default function RootLayout({
         className={`flex flex-col min-h-screen w-full max-w-[1920px] mx-auto overflow-x-hidden ${manrope.variable} ${geistMono.variable} antialiased `}
       >
         <MainHeader />
-        <main className="flex flex-col justify-center items-center flex-grow max-w-screen mx-auto lg:px-6 px-5">
+        <main className="flex flex-col justify-center items-center flex-grow min-w-screen mx-auto lg:px-6 px-5">
           {children}
         </main>
         <Footer />
