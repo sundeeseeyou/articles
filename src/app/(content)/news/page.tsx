@@ -1,16 +1,18 @@
 import NewsCard from "@/components/news/NewsCard";
-// import { getAllNews } from "@/lib/news";
+import { getAllNews } from "@/lib/news";
 
 export default async function News() {
-  // const all = getAllNews();
-  const response = await fetch("http://localhost:8080/news");
+  const all = getAllNews();
 
-  if (!response.ok) {
-    throw new Error("Failed to fetch news data");
-  }
+  //to use API http fetch START
+  // const response = await fetch("http://localhost:8080/news");
 
-  const all = await response.json();
+  // if (!response.ok) {
+  //   throw new Error("Failed to fetch news data");
+  // }
 
+  // const all = await response.json();
+  //END
   return (
     <>
       <h1 className="text-4xl font-bold">Hottest News!</h1>
