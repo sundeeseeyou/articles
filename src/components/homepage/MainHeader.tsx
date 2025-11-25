@@ -28,7 +28,7 @@ export default function MainHeader() {
 
           <li>
             <Link
-              href={"/contacts"}
+              href={"/contact"}
               className="flex flex-row gap-2 px-8 py-2 bg-primary rounded-full hover:opacity-90 transition"
             >
               Contact
