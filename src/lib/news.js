@@ -3,8 +3,9 @@ import { DUMMY_NEWS } from "../../dummy-news";
 
 const db = sqlite("data.db");
 
-export function getAllNews() {
+export async function getAllNews() {
   const news = db.prepare("SELECT * FROM news").all();
+  await new Promise((resolve) => setTimeout(resolve, 1000));
   return news;
 }
 
